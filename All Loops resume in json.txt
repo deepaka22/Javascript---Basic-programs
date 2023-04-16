@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var basicinfo = [{
+   'qualifications:':'B.E Civil enginneering',
+    'mail:': 'Deepakbakyalakshmi1997@gmail.com',
+    'address:': '38, sathyanarayanan street, chennai, India',
+    'mobile:': '806254605',
+'10th:': 'Velammal higher sec school',
+'grade1:': '80%',
+'12th:': 'velammal higher sec school',
+'grade2:' : '82%',
+'college:' : 'PERI IT',
+'grade3:': '80%',
+}]
+
+// using For loop s
+for (i=0;i<basicinfo.length;i++){
+
+    console.log(basicinfo[i]['qualifications:']);
+    console.log(basicinfo[i]['mail:']);
+    console.log(basicinfo[i]['address:']);
+    console.log(basicinfo[i]['mobile:']);
+    console.log(basicinfo[i]['10th:']);
+    console.log(basicinfo[i]['grade1:']);
+    console.log(basicinfo[i]['12th:']);
+    console.log(basicinfo[i]['grade2:']);
+    console.log(basicinfo[i]['college:']);
+    console.log(basicinfo[i]['grade3:']);
+
+} 
+
+// using for in loop
+
+for (let i in basicinfo){
+    console.log(basicinfo[i]['qualifications:']);
+    console.log(basicinfo[i]['mail:']);
+    console.log(basicinfo[i]['address:']);
+    console.log(basicinfo[i]['mobile:']);
+    console.log(basicinfo[i]['10th:']);
+    console.log(basicinfo[i]['grade1:']);
+    console.log(basicinfo[i]['12th:']);
+    console.log(basicinfo[i]['grade2:']);
+    console.log(basicinfo[i]['college:']);
+    console.log(basicinfo[i]['grade3:']);
+
+
+}
+
+// using for of 
+
+ for (let i of basicinfo){
+    console.log(i['qualifications:']);
+    console.log(i['mail:']);
+    console.log(i['address:']);
+    console.log(i['mobile:']);
+    console.log(i['10th:']);
+    console.log(i['grade1:']);
+    console.log(i['12th:']);
+    console.log(i['grade2:']);
+    console.log(i['college:']);
+    console.log(i['grade3:']);
+
+ }
+
+ // using for each
+
+ basicinfo.forEach((ele)=>{
+    console.log(ele['qualifications:'])
+    console.log(ele['mail:']);
+    console.log(ele['address:']);
+    console.log(ele['mobile:']);
+    console.log(ele['10th:']);
+    console.log(ele['grade1:']);
+    console.log(ele['12th:']);
+    console.log(ele['grade2:']);
+    console.log(ele['college:']);
+    console.log(ele['grade3:']);
+
+ })
+
+    </script>
+</body>
+</html>
