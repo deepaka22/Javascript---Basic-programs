@@ -1,0 +1,107 @@
+// class task :
+
+// create array of objects with students as object has id, name, dept, marks (in array inside the student object), and find the total, 
+// and average of the marks obtained, and pint the totatl, and average in object.
+
+
+
+// creating 3 objects with object name as students.
+
+
+
+
+var students = [];
+
+
+
+function objcreation(){
+for (i=0;i<4;i++){
+
+var obj1 = {};
+
+obj1['id'] = i;
+obj1['name'] = "std"+i;
+obj1['department'] = 'Civil';
+obj1['marks'] = [10, 25*i, 20*i, 40, 50];
+
+console.log(obj1); // 1st console for all objects
+
+students.push(obj1); // pusing all objects to array as Array of objects.
+
+}
+
+}
+
+
+
+// Find the total marks obtained.
+
+function total (){
+
+for (j=0;j<students.length;j++){
+
+    var studentMarks = students[j].marks
+
+    var marksObtained = 0;
+
+        for (k=0; k<studentMarks.length;k++){
+
+            marksObtained = marksObtained + studentMarks[k];
+
+        }
+
+        console.log(marksObtained); // 3rd console for marks obtained
+
+        students[j]['total']= marksObtained; // creating an newobj as total and assigning to  marksObtained.
+
+}
+
+}
+
+
+
+// Find the average of the students.
+
+function avg(){
+
+for (m=0;m<students.length;m++){
+
+    var averageObtained = students[m].total;
+
+    var marks = students[m].marks.length;
+
+    var avg = averageObtained/marks;
+
+    console.log(avg); // avg obtained.
+
+  students[m]['Average'] = avg; // creating an newobj as Average and assigning to  avg.
+
+
+}
+
+}
+
+// console.log(students); // new console.
+
+function grades(){
+
+for (n=0; n<students.length;n++){
+
+    if (students[n].Average > 35){
+
+        students[n]['grade'] = "Pass";
+
+    }
+    else {
+        students[n]['grade'] = 'fail';
+    }
+
+}
+
+}
+
+
+objcreation();
+total();
+avg();
+grades();
